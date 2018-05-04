@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project Three</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="hero">
+            <p class="type-it"></p>
+        </div>
+        <!-- end of div.hero -->
+        <a href="#complimentPage" class="start-button"></a>
+    </header>
+    <main>
+        <section id="complimentPage">
+            <div class="wrapper">
+                <div class="openingQuestion">
+                    <p>Do you want your compliment to be 
+                    <span class="italic">mild</span>, 
+                    <span class="bold">medium</span>
+                    or <span class="emphasis">spicy?!</span></p>
+                    <form>
+                        <div class="spiceLevel">
+                            <label for="mild">Mild</label>
+                            <input type="radio" name="spice" id="mild" value="mild" checked="checked">
+
+                            <label for="medium">Medium</label>
+                            <input type="radio" name="spice" id="medium" value="medium">
+
+                            <label for="spicy">Spicy</label>
+                            <input type="radio" name="spice" id="spicy" value="spicy">
+                        </div>
+                        <!-- end of div.spiceLevel -->
+                        <div>
+                            <input type="submit" value="Flatter me!">
+                        </div>
+                    </form>
+                    <!-- end of form -->
+                </div>
+                <!-- end of div.openingQuestion -->
+
+                <div class="complimentScreen">
+                    <div class="randomResult"></div>
+                    <a href="#" class="generate-button"></a>
+                    <!-- <i class="fab fa-twitter"></i>
+                    <a href="https://twitter.com/lindsay_codes?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @lindsay_codes</a> -->
+                    
+                </div>
+                <!-- end of div.complimentScreen -->
+            </div>
+            <!-- end of div.wrapper -->
+        </section>
+        <!-- end of #complimentScreen -->
+
+
+
+    </main>
+
+    <!-- twitter follow -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- typeit -->
+    <script src="https://cdn.jsdelivr.net/npm/typeit@5.9.0/dist/typeit.min.js" />
+    <!-- smooth scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- external script file -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>
