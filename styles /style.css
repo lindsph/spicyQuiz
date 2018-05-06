@@ -43,6 +43,10 @@ form {
     font-family: 'Montserrat', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 label,
 input {
     margin-right: 10px;
@@ -78,6 +82,11 @@ header {
     0%{background-position:0% 22%}
     50%{background-position:100% 79%}
     100%{background-position:0% 22%}
+}
+
+#twitter,
+.startOver {
+    display: none;
 }
 
 main {
@@ -127,10 +136,6 @@ div.spiceLevel {
     justify-content: center;
 }
 
-div.complimentScreen {
-    display: none;
-}
-
 #complimentPage {
     position: relative;
     top: 50%;
@@ -152,22 +157,32 @@ div.complimentScreen {
 }
 
 a.start-button {
-    height: 10vh;
-    position: absolute;
+    transform: rotate(45deg);
     bottom: 5%;
     left: 50%;
+}
+
+a.start-button,
+a.startOver {
+    height: 10vh;
+    position: absolute;
     border-right: 2px solid white;
     border-bottom: 2px solid white;
     height: 25px;
     width: 25px;
-    transform: rotate(45deg);
     transition: all 0.5s;
+}
+
+a.startOver {
+    transform: rotate(225deg);
+    left: 50%;
+    top: 5%;
 }
 
 .generate-button {
     display: inline-block;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 10px;
@@ -178,15 +193,11 @@ a.start-button {
     cursor: pointer;
 }
 
-/* a.generate-button:active {
- border: 2px solid black;
-} */
-
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 375px) {
   html {
-    font-size: 2.5vw;
+    font-size: 2vh;
   }
 
   div.spiceLevel {

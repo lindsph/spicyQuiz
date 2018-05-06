@@ -33,7 +33,8 @@ const spicy = [
 const button = [
     "This feels nice. Again!",
     "One more, please.",
-    "Keep it coming!"
+    "Keep it coming!",
+    "Meh, try again."
 ]
 
 const color = [
@@ -82,48 +83,23 @@ $(function() {
     });
     // end of form submit
 
+
     $('body').on('click', "a.generate-button", function(e) {
         e.preventDefault();
-        let randomButtonText = getRandomItemFromArray(button);
-        let randomBackgroundColor = getRandomItemFromArray(color); 
-        let spice = getRandomItemFromArray(spiceLevel);
-        // console.log(randomButtonText, randomBackgroundColor, spice);
+        // changes background color on each click
+        $('main').css('background-color', `${getRandomItemFromArray(color)}`);
 
-        // show each variable on page, delete current compliment, and current button text
-        $('.randomResult').replaceWith(`<h1>${spice}</h1>`);
-       
+        // change the compliment
+        $('.randomResult h1').text(`${getRandomItemFromArray(spiceLevel)}`);
 
-        // show the result in "results" section in html
-        // $('.results').html(`<h2 class="choice">${finalResult.title}</h2>`);
+        // text the button to change
+        $('.generate-button').text(`${getRandomItemFromArray(button)}`);
 
-        // show or hide jquery options?
+        $("#twitter").show();
 
+        // return to initial selection
+        $(".startOver").show();
     });
-
-
-
-        // log change of compliment and button change to page
-
-        // create a share "button" underneath that, that on click:
-        // 1. accordion effect
-        // 2. has options too like on facebook, share on facebook, follow me on twitter
-
-        // once complete all
-        // 1. complete styling/test for responsive (why isnt first page working?)
-        // 2. add question that asks the persons name
-        //    - add template literals
-
-
- 
-
-
-
-
-
-
-
-
-
 
 new TypeIt('.type-it', {
         speed: 100,
